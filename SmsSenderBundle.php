@@ -1,6 +1,9 @@
 <?php
 namespace GergelyPolonkai\SmsSenderBundle;
 
-class SmsSenderBundle
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class SmsSenderBundle extends Bundle
 {
 }
+
