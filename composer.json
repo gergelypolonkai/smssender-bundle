@@ -1,0 +1,29 @@
+{
+    "name": "gergelypolonkai/smssender-bundle",
+    "description": "Symfony2 bundle to interact with gergelypolonkai/smssender",
+    "minimum-stability": "dev",
+    "type": "symfony-bundle",
+    "homepage": "https://github.com/gergelypolonkai/smssender-bundle",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gergelypolonkai/smssender"
+        }
+    ],
+    "authors": [
+        {
+            "name": "Gergely Polonkai",
+            "email": "gergely@polonkai.eu"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "2.1.*",
+        "gergelypolonkai/smssender": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "GergelyPolonkai\\SmsSenderBundle": ""
+        }
+    },
+    "target-dir": "GergelyPolonkai/SmsSenderBundle"
+}
