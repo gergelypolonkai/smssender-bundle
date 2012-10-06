@@ -36,16 +36,24 @@ class Sender
 
     public function login($username, $password)
     {
-        var_dump($this->sender->login($username, $password));
+        if ($this->sender->login($username, $password) === true) {
+            $this->loggedIn = true;
+        }
     }
 
     public function sendMessage($recipient, $message, array $passwordLocations)
     {
-        var_dump($this->sender->sendMessage($recipient, $message, $passwordLocations));
+        if (!$this->loggedIn) {
+            return false;
+        }
+        $this->sender->sendMessage($recipient, $message, $passwordLocations);
     }
 
     public function logout()
     {
-        var_dump($this->sender->logout());
+        if (!$this->loggedIn) {
+            return false;
+        }
+        $this->sender->logout();
     }
 }
