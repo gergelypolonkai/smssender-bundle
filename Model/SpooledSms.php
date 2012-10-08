@@ -1,5 +1,5 @@
 <?php
-namespace BrokernetGroup\Common\SMSSenderBundle\Model;
+namespace GergelyPolonkai\SMSSenderBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 
