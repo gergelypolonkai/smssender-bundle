@@ -1,5 +1,5 @@
 <?php
-namespace GergelyPolonkai\SMSSenderBundle\Service;
+namespace GergelyPolonkai\SmsSenderBundle\Service;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use RuntimeException;

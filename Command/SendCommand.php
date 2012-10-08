@@ -1,5 +1,5 @@
 <?php
-namespace GergelyPolonkai\SMSSenderBundle\Command;
+namespace GergelyPolonkai\SmsSenderBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
