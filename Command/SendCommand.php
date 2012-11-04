@@ -20,10 +20,7 @@ class SendCommand extends ContainerAwareCommand
         $container = $this->getContainer();
 
         $sender = $container->get('gergelypolonkai_smssender.sender');
-        $sender->login(
-                $container->getParameter('username'),
-                $container->getParameter('password')
-        );
+        $sender->login();
         $sender->sendMessage($input->getArgument('recipient'), $input->getArgument('message'), array());
         $sender->logout();
     }

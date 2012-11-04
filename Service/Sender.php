@@ -34,9 +34,9 @@ class Sender
         );
     }
 
-    public function login($username, $password)
+    public function login()
     {
-        if ($this->sender->login($username, $password) === true) {
+        if ($this->sender->login($this->container->getParameter('username'), $this->container->getParameter('password')) === true) {
             $this->loggedIn = true;
         }
     }
