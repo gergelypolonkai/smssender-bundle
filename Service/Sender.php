@@ -38,6 +38,8 @@ class Sender
     {
         if ($this->sender->login($this->container->getParameter('username'), $this->container->getParameter('password')) === true) {
             $this->loggedIn = true;
+        } else {
+            throw new \RuntimeException('Unable to login to gateway!');
         }
     }
 
