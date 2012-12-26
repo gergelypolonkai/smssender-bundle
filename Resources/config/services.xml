@@ -6,10 +6,14 @@
 
     <parameters>
         <parameter key="gergely_polonkai_sms_sender.sender.class">GergelyPolonkai\SmsSenderBundle\Service\Sender</parameter>
+        <parameter key="gergely_polonkai_sms_sender.ovhSoapSender.class">GergelyPolonkai\SmsSenderBundle\Service\OvhSoapSender</parameter>
     </parameters>
 
     <services>
         <service id="gergely_polonkai_sms_sender.sender" class="%gergely_polonkai_sms_sender.sender.class%">
+            <argument type="service" id="service_container" />
+        </service>
+        <service id="gergely_polonkai_sms_sender.ovhSoapSender" class="%gergely_polonkai_sms_sender.ovhSoapSender.class%">
             <argument type="service" id="service_container" />
         </service>
     </services>

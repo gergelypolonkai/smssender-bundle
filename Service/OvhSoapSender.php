@@ -10,7 +10,7 @@ use GergelyPolonkai\SmsSender\OvhSoapSender as BaseSender;
  *
  * SMS Sending service for OVH Soap based SMS Sender server
  */
-class Sender
+class OvhSoapSender
 {
     private $loggedIn;
 
@@ -27,16 +27,13 @@ class Sender
 
         $this->sender = new BaseSender(
                 $this->container->getParameter('sender_url'),
-                $this->container->getParameter('content_type'),
-                $this->container->getParameter('content_encoding'),
-                $this->container->getParameter('verify_ssl'),
-                $this->container->getParameter('verbose_curl')
-        );
+                $this->container->getParameter('sms_account_id'),
+                $this->container->getParameter('from'));
     }
 
     public function login()
     {
-        if ($this->sender->login($this->container->getParameter('username'), $this->container->getParameter('password')) === true) {
+        if ($this->sender->login($this->container->getParameter('username'), $this->container->getParameter('password'))){
             $this->loggedIn = true;
         } else {
             throw new \RuntimeException('Unable to login to gateway!');
