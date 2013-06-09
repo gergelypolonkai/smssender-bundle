@@ -1,5 +1,5 @@
 {
-    "name": "gergelypolonkai/smssender-bundle",
+    "name": "appventus/smssender-bundle",
     "description": "Symfony2 bundle to interact with gergelypolonkai/smssender",
     "minimum-stability": "dev",
     "type": "symfony-bundle",
@@ -14,6 +14,10 @@
         {
             "name": "Gergely Polonkai",
             "email": "gergely@polonkai.eu"
+        },
+        {
+            "name": "Leny BERNARD",
+            "email": "leny@appventus.com"
         }
     ],
     "require": {

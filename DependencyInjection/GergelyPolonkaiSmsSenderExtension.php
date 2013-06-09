@@ -28,5 +28,7 @@ class GergelyPolonkaiSmsSenderExtension extends Extension
         $container->setParameter('verbose_curl', $config['verbose_curl']);
         $container->setParameter('username', $config['username']);
         $container->setParameter('password', $config['password']);
+        $container->setParameter('sms_account_id', $config['sms_account_id']);
+        $container->setParameter('from', $config['from']);
     }
 }
